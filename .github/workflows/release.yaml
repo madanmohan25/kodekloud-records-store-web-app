@@ -128,11 +128,11 @@ jobs:
           source venv/bin/activate
           pip install --upgrade pip-audit
 
-      # - name: Scan for Vulnerable Dependencies
-      #   run: |
-      #     source venv/bin/activate
-      #     echo "🔍 Security scan with latest tools..."
-      #     pip --version
+      - name: Scan for Vulnerable Dependencies
+        run: |
+          source venv/bin/activate
+          echo "🔍 Security scan with latest tools..."
+          pip --version
           
       #     # Smart vulnerability handling - only fail on HIGH/CRITICAL
       #     pip-audit --severity medium --output-format json --output security-report.json || {
